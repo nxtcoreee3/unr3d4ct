@@ -18,7 +18,7 @@ Due to recent changes in Python package management (PEP 668), it is highly recom
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/nxtcoreee3/unr3d4ct.git](https://github.com/nxtcoreee3/unr3d4ct.git)
+git clone https://github.com/nxtcoreee3/unr3d4ct.git
 cd unr3d4ct
 ```
 
