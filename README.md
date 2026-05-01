@@ -1,14 +1,3 @@
-```
-
----
-
-### Pro-Tip for your GitHub Repo:
-Once you've pasted this into your file, don't forget to swap out `YOUR_USERNAME` in the clone link with your actual GitHub usernameHere is a professionally formatted **README.md** specifically tailored for **unr3d4ct**. I've designed it to look great on GitHub, with clear sections and easy-to-follow instructions.
-
-Simply create a file named `README.md` in your project folder and paste the following:
-
----
-```markdown
 # unr3d4ct 🔍
 
 `unr3d4ct` is a lightweight digital forensics tool designed to recover text hidden under low-opacity digital redactions, such as "highlighter" marks or semi-transparent brush strokes often found in mobile photo editors.
