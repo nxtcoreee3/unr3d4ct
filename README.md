@@ -36,12 +36,10 @@ source venv/bin/activate
 
 ### 3. Install Dependencies
 Once the environment is active (you should see `(venv)` in your terminal), run:
+```bash
 # On Windows:
-```bash
 pip install -r requirements.txt
-```
 # On macOS/Linux:
-```bash
 pip3 install -r requirements.txt
 ```
 ---
