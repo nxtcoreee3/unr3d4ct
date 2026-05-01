@@ -5,21 +5,20 @@ import sys
 import subprocess
 
 def unr3d4ct(image_path):
-    # Load the target image
+    
     img = cv2.imread(image_path)
     if img is None:
         print(f"[-] Error: Could not find or open '{image_path}'")
         return
 
-    # Setup output directory
+    
     output_dir = "unr3d4ct_exports"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"[*] Initializing unr3d4ct scan on: {image_path}")
 
-    # Forensic adjustment parameters
-    # Alpha: Contrast | Beta: Brightness | Gamma: Shadow Recovery
+    
     alphas = [1.5, 2.5, 4.0]  
     betas = [-70, -30, 0, 30, 70]
     gammas = [0.2, 0.5, 1.0, 1.8]
@@ -29,16 +28,16 @@ def unr3d4ct(image_path):
 
     for a in alphas:
         for b in betas:
-            # Apply linear transformation
+            
             adjusted = cv2.convertScaleAbs(img, alpha=a, beta=b)
             
             for g in gammas:
-                # Apply non-linear Gamma correction
+                
                 inv_gamma = 1.0 / g
                 table = np.array([((i / 255.0) ** inv_gamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
                 final = cv2.LUT(adjusted, table)
                 
-                # Save variant
+              
                 out_file = f"{output_dir}/v_a{a}_b{b}_g{g}.jpg"
                 cv2.imwrite(out_file, final)
                 
@@ -48,7 +47,7 @@ def unr3d4ct(image_path):
 
     print(f"\n[!] Scan complete. Results saved in '{output_dir}/'")
 
-    # Mac-specific: Open folder and play system alert
+    
     try:
         subprocess.run(["open", output_dir])
         subprocess.run(["afplay", "/System/Library/Sounds/Tink.aiff"])
