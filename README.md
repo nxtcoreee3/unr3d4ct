@@ -52,8 +52,26 @@ python3 unr3d4ct.py path/to/your/image.png
 
 *Note: To exit the virtual environment when you are done, simply type `deactivate`.*
 
+🗑 Cleaning up
 
+To delete all previously generated variants and free up space:
 
+```Bash
+python3 unr3d4ct.py --clean
+```
+📥 Batch Processing (Drop Zone)
+
+If you have multiple images to check:
+
+Create a folder named drop_zone in the project directory.
+
+Drag and drop all your redacted images into that folder.
+
+Run:
+
+```Bash
+python3 unr3d4ct.py --watch
+```
 ## ⚙️ How it Works
 
 The script applies the following forensic transformations:
