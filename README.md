@@ -8,45 +8,51 @@
 
 Many mobile redaction tools don't actually delete pixel data; they simply overlay a semi-transparent color. `unr3d4ct` performs a multi-pass histogram expansion on your image. By cycling through aggressive contrast, brightness, and gamma adjustments, it isolates the slight color variances between a redaction stroke and the underlying text.
 
+
 ---
+
 
 ## 🛠 Installation
 
+Due to recent changes in Python package management (PEP 668), it is highly recommended to install `unr3d4ct` within a virtual environment to avoid system conflicts.
+
 ### 1. Clone the Repository
-Open your terminal and run:
 ```bash
-git clone https://github.com/nxtcoreee3/unr3d4ct.git
+git clone [https://github.com/YOUR_USERNAME/unr3d4ct.git](https://github.com/YOUR_USERNAME/unr3d4ct.git)
 cd unr3d4ct
 ```
 
-### 2. Install Dependencies
-Ensure you have Python 3 installed, then run:
+### 2. Set Up Virtual Environment (Recommended)
 ```bash
-pip install -r requirements.txt
+# Create the environment
+python3 -m venv venv
+
+# Activate it
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+.\venv\Scripts\activate
 ```
 
-*(Optional for macOS/Linux users)*: Make the installer executable:
+### 3. Install Dependencies
+Once the environment is active (you should see `(venv)` in your terminal), run:
 ```bash
-chmod +x install.sh
-./install.sh
+pip install -r requirements.txt
 ```
 
 ---
 
 ## 💻 Usage
 
-Run the script and provide the path to the redacted image:
+With your virtual environment active, run the tool on any image:
 
 ```bash
-python3 unr3d4ct.py evidence.png
+python3 unr3d4ct.py path/to/your/image.png
 ```
 
-### What happens next?
-1. The tool generates a spectrum of exposure variants using different **Alpha** (Contrast), **Beta** (Brightness), and **Gamma** levels.
-2. Results are saved to a new folder: `unr3d4ct_exports/`.
-3. **macOS Users:** The folder will automatically pop open, and a system alert will sound when finished.
+*Note: To exit the virtual environment when you are done, simply type `deactivate`.*
+```
 
----
 
 ## ⚙️ How it Works
 
