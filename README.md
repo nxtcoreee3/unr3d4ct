@@ -51,7 +51,7 @@ python3 unr3d4ct.py path/to/your/image.png
 ```
 
 *Note: To exit the virtual environment when you are done, simply type `deactivate`.*
-```
+
 
 
 ## ⚙️ How it Works
