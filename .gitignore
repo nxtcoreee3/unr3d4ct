@@ -1,0 +1,23 @@
+# --- unr3d4ct Specific ---
+# Ignore the folder where the processed images are saved
+unr3d4ct_exports/
+unr3d4ct_results/
+
+# --- Python Specific ---
+# Ignore compiled python files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# --- macOS Specific ---
+# Ignore those hidden gallery/folder metadata files Mac creates
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- System/Log files ---
+*.log
